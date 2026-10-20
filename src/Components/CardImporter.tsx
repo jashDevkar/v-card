@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import  { useState, useCallback, useRef, useEffect } from "react";
 import * as XLSX from "xlsx";
 import JSZip from "jszip";
 import {
@@ -202,7 +202,7 @@ async function downloadAllAsZip(contacts: Contact[]): Promise<void> {
   triggerDownload(blob, "contacts.zip");
 }
 
-export default function ContactCardImporter(): JSX.Element {
+export default function ContactCardImporter() {
   useGoogleFonts();
 
   const [status, setStatus] = useState<Status>("idle");
